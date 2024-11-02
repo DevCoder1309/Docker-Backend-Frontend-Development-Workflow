@@ -38,6 +38,8 @@ services:
     volumes:
       - /home/node/app/node_modules
       - ./client:/home/node/app
+    environment:
+      - WDS_SOCKET_PORT=0
   worker:
     build:
       context: ./worker
